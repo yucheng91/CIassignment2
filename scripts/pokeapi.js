@@ -12,8 +12,11 @@ function NameSearch(){
             // console.log(response.data.name)
             let pokemonname = response.data.name;
             console.log(response.data.types[0].type.name)
-            console.log(response.data.id);
+            let pokemonid = response.data.id;
             
-                $("#PokemonName").append(`Name : ${pokemonname}`);
+                //try inner HTML;
+            $('#pokemonname').html(pokemonname);
+            $('#pokemonid').html(pokemonid);
+            
         })
 }
