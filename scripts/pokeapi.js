@@ -8,15 +8,20 @@ function NameSearch(){
     
     axios.get(pokemonurl)
         .then(function(response){
-            console.log(response.data)
+            console.log(response.data);
             // console.log(response.data.name)
+            let pokemonfront = response.data.sprites.front_default;
+            let pokemonback = response.data.sprites.back_default;
             let pokemonname = response.data.name;
-            console.log(response.data.types[0].type.name)
+            let pokemontype = response.data.types[0].type.name;
             let pokemonid = response.data.id;
             
                 //try inner HTML;
+            $('#pokemonfront').attr("src",pokemonfront)
+            $('#pokemonback').attr("src",pokemonback)
+            $('#pokemonid').html(pokemonid);    
             $('#pokemonname').html(pokemonname);
-            $('#pokemonid').html(pokemonid);
+            $('#pokemontype').html(pokemontype);
             
         })
 }
