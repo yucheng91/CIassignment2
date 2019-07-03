@@ -1,13 +1,13 @@
 /* global axios */
 /* global $ */
 
-function NameSearch(){
+function NameSearch() {
     let name = document.getElementById("NameInput").value.toLowerCase();
-    //PokeAPI api works by having the pokemon name/number right behind the URL
+    //PokeAPI api works by having the pokemon name/Stat right behind the URL
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
-    
+
     axios.get(pokemonurl)
-        .then(function(response){
+        .then(function(response) {
             console.log(response.data);
             let pokemonfront = response.data.sprites.front_default;
             let pokemonback = response.data.sprites.back_default;
@@ -16,32 +16,42 @@ function NameSearch(){
             let pokemonheight = response.data.height * 10
             let pokemontype = response.data.types[0].type.name;
             let pokemonid = response.data.id;
-            
+
             //using inner.html to display results on html
-            $('#pokemonfront').attr("src",pokemonfront);
-            $('#pokemonback').attr("src",pokemonback);
+            $('#pokemonfront').attr("src", pokemonfront);
+            $('#pokemonback').attr("src", pokemonback);
             $('#pokemonweight').html(pokemonweight + 'kg');
             $('#pokemonheight').html(pokemonheight + 'cm');
-            $('#pokemonid').html(pokemonid);    
+            $('#pokemonid').html(pokemonid);
             $('#pokemonname').html(pokemonname);
             $('#pokemontype').html(pokemontype);
+            
+            
+            //combining the stat & stat result
+            let pokemonstatname1 = response.data.stats[0].stat.name;
+            let pokemonstatname2 = response.data.stats[1].stat.name;
+            let pokemonstatname3 = response.data.stats[2].stat.name;
+            let pokemonstatname4 = response.data.stats[3].stat.name;
+            let pokemonstatname5 = response.data.stats[4].stat.name;
+            let pokemonstatname6 = response.data.stats[5].stat.name;
 
-            let pokemonspeed = response.data.stats[0].base_stat;
-            let pokemonspecialdefense = response.data.stats[1].base_stat;
-            let pokemonspecialattack = response.data.stats[2].base_stat;
-            let pokemondefense = response.data.stats[3].base_stat;
-            let pokemonattack = response.data.stats[4].base_stat;
-            let pokemonhp = response.data.stats[5].base_stat;
+            let pokemonstat1 = response.data.stats[0].base_stat;
+            let pokemonstat2  = response.data.stats[1].base_stat;
+            let pokemonstat3  = response.data.stats[2].base_stat;
+            let pokemonstat4  = response.data.stats[3].base_stat;
+            let pokemonstat5  = response.data.stats[4].base_stat;
+            let pokemonstat6 = response.data.stats[5].base_stat;
             
-            let statdata = {
-                "Speed": pokemonspeed,
-                "Special Defense" : pokemonspecialdefense,
-                "Special Attack" : pokemonspecialattack,
-                "Defense" : pokemondefense,
-                "Attack" : pokemonattack,
-                "HP" : pokemonhp
-            }
+            //combining all stats into usable array
             
+            let statdata = [{"name":pokemonstatname1,"stat":pokemonstat1},
+            {"name":pokemonstatname2,"stat":pokemonstat2},
+            {"name":pokemonstatname3,"stat":pokemonstat3},
+            {"name":pokemonstatname4,"stat":pokemonstat4},
+            {"name":pokemonstatname5,"stat":pokemonstat5},
+            {"name":pokemonstatname6,"stat":pokemonstat6}]
             
-        })
+            console.log(statdata)
+        }
+     );
 }
