@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
@@ -20,15 +21,15 @@
 <body>
 
     <Section id="screen">
-        <div><input id="NameInput" type="text" placeholder="Enter Pokemon Name/Index"></div>
+        <div id="inputbox"><input id="NameInput" type="text" placeholder="Enter Pokemon Name/Index"></div>
         <br>
-        <div><button type="reset" onClick="NameSearch()">Who's That Pokemon!!!</button></div>
-
+        <div><button type="reset" onClick="NameSearch()">WHO'S THAT POKEMON</button></div>
+        <br>
         <div id="pokemonimg">
             <img id="pokemonfront"></img> <img id="pokemonback"></img>
         </div>
         
-        <div><h2>#<span id="pokemonid"></span> <span id="pokemonname"></span></h2></div>
+        <div><h2><span id="pokemonid"></span> <span id="pokemonname"></span></h2></div>
 
         <div class="container-fluid">
             <div class="row">

@@ -12,8 +12,8 @@ function NameSearch() {
             let pokemonfront = response.data.sprites.front_default;
             let pokemonback = response.data.sprites.back_default;
             let pokemonname = response.data.name;
-            let pokemonweight = response.data.weight / 100;
-            let pokemonheight = response.data.height * 10
+            let pokemonweight = response.data.weight / 10;
+            let pokemonheight = response.data.height / 10;
             let pokemontype = response.data.types[0].type.name;
             let pokemonid = response.data.id;
 
@@ -21,8 +21,8 @@ function NameSearch() {
             $('#pokemonfront').attr("src", pokemonfront);
             $('#pokemonback').attr("src", pokemonback);
             $('#pokemonweight').html(pokemonweight + 'kg');
-            $('#pokemonheight').html(pokemonheight + 'cm');
-            $('#pokemonid').html(pokemonid);
+            $('#pokemonheight').html(pokemonheight + 'm');
+            $('#pokemonid').html("#" + pokemonid);
             $('#pokemonname').html(pokemonname);
             $('#pokemontype').html(pokemontype);
 
