@@ -57,21 +57,26 @@ function NameSearch() {
 
             makeGraphs(statdata)
         })
-        function makeGraphs(statdata){
-            // console.log(_.pluck(statdata,"name"));
-        var cf=crossfilter(statdata)
-        
-        var nameDim = cf.dimension(function(d){ return d.name;});
-		var statGroup = nameDim.group().reduceSum(function(d){ return d.stat;});
 
-		var statesPieChart = dc.pieChart("#pokemonstatchart")
-    	    .height(250)
-    	    .width(350)
-    	    .drawPaths(true)
-    	    .dimension(nameDim)
-    	    .group(statGroup)
-    	    .legend(dc.legend().x(400).y(10).itemHeight(13).gap(5))
-    	    
-    	 dc.renderAll();
-        }
+    function makeGraphs(statdata) {
+        // console.log(_.pluck(statdata,"name"));
+        var cf = crossfilter(statdata)
+
+        var nameDim = cf.dimension(function(d) { return d.name; });
+        var statGroup = nameDim.group().reduceSum(function(d) { return d.stat; });
+
+        var statesPieChart = dc.pieChart("#pokemonstatchart")
+            .width(384)
+            .height(300)
+            .innerRadius(60)
+            .externalLabels(20)
+            .externalRadiusPadding(20)
+            .drawPaths(true)
+            .dimension(nameDim)
+            .group(statGroup)
+        //   .legend(dc.legend());
+        
+        dc.renderAll()
+                
+    }
 }

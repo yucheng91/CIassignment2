@@ -9,43 +9,45 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-    <script src ="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div><input id="NameInput" type="text" placeholder="Enter Pokemon Name/Index"></div>
-    <br>
-    <div><button type="reset" onClick="NameSearch()">Who's That Pokemon!!!</button></div>
 
-    <div id="pokemonimg">
-        <img id="pokemonfront"></img> <img id="pokemonback"></img>
-    </div>
-    <h2>#<span id="pokemonid"></span> <span id="pokemonname"></span></h2>
+    <Section id="screen">
+        <div><input id="NameInput" type="text" placeholder="Enter Pokemon Name/Index"></div>
+        <br>
+        <div><button type="reset" onClick="NameSearch()">Who's That Pokemon!!!</button></div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-12 col-sm-3">
-                <p>Height : <span id="pokemonheight"></span></p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p>Weight : <span id="pokemonweight"></span></p>
-            </div>
-            <div class="col-12 col-sm-3">
-                <p>Type : <span id="pokemontype"></span></p>
-            </div>
-            <div class="col"></div>
+        <div id="pokemonimg">
+            <img id="pokemonfront"></img> <img id="pokemonback"></img>
         </div>
-    </div>
-    
-        <div id="pokemonstatchart"></div>
+        <h2>#<span id="pokemonid"></span> <span id="pokemonname"></span></h2>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-12 col-sm-3">
+                    <p>Height : <span id="pokemonheight"></span></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p>Weight : <span id="pokemonweight"></span></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p>Type : <span id="pokemontype"></span></p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <div>
+            <h3>Stats Overview</h3><span id="pokemonstatchart"></span></div>
+    </Section>
 
 
     <script src="scripts/pokeapi.js"></script>

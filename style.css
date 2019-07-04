@@ -5,3 +5,8 @@ span {
 body {
     text-align: center;
 }
+
+#pokemonstatchart{
+    font-size:10px;
+    text-transform: capitalize;
+}
