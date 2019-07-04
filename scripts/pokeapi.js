@@ -8,26 +8,39 @@ function NameSearch() {
 
     axios.get(pokemonurl)
         .then(function(response) {
-            console.log(response.data);
+            // console.log(response.data);
             let pokemonfront = response.data.sprites.front_default;
             let pokemonback = response.data.sprites.back_default;
             let pokemonname = response.data.name;
             let pokemonweight = response.data.weight / 10;
             let pokemonheight = response.data.height / 10;
-            let pokemontype = response.data.types[0].type.name;
+            let pokemontype1 = response.data.types[0].type.name;
             let pokemonid = response.data.id;
 
             //using inner.html to display results on html
             $('#pokemonfront').attr("src", pokemonfront);
             $('#pokemonback').attr("src", pokemonback);
-            $('#pokemonweight').html(pokemonweight + 'kg');
-            $('#pokemonheight').html(pokemonheight + 'm');
+            $('#pokemonweight').html('Weight :' + pokemonweight + 'kg');
+            $('#pokemonheight').html('Height :' + pokemonheight + 'm');
             $('#pokemonid').html("#" + pokemonid);
             $('#pokemonname').html(pokemonname);
-            $('#pokemontype').html(pokemontype);
+            $('#pokemontype1').html(pokemontype1);
 
+            try {
+                response.data.types[1].type.name;
+                }
+            catch (e) {
+                $('#pokemontype2').html("");
+                }
+            
+            let pokemontype2 = response.data.types[1].type.name;
+            
+            // error - html not refreshing
+            $('#pokemontype2').html('/' + pokemontype2);
 
-            //combining the stat & stat result
+           
+
+            //combining the stat & stat result 
             let pokemonstatname1 = response.data.stats[0].stat.name;
             let pokemonstatname2 = response.data.stats[1].stat.name;
             let pokemonstatname3 = response.data.stats[2].stat.name;
@@ -52,9 +65,6 @@ function NameSearch() {
                 { "name": pokemonstatname6, "stat": pokemonstat6 }
             ];
 
-            console.log(statdata);
-            console.log(statdata[0].name);
-
             makeGraphs(statdata)
         })
 
@@ -75,8 +85,8 @@ function NameSearch() {
             .dimension(nameDim)
             .group(statGroup)
         //   .legend(dc.legend());
-        
+
         dc.renderAll()
-                
+
     }
 }
