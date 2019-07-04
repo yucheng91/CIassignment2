@@ -4,9 +4,23 @@ span {
 
 body {
     text-align: center;
+    background-image:url("background/pokedex.png")
+}
+
+img {
+    background-image:url("background/pk_bg2.jpg");
+    background-size:100%;
+    border-radius:5px;
 }
 
 #pokemonstatchart{
     font-size:10px;
     text-transform: capitalize;
+}
+
+#screen {
+    margin:5%;
+    border:10px solid lightgrey;
+    height:725px;
+    overflow: scroll;
 }
