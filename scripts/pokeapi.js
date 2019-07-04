@@ -24,22 +24,10 @@ function NameSearch() {
             $('#pokemonheight').html('Height :' + pokemonheight + 'm');
             $('#pokemonid').html("#" + pokemonid);
             $('#pokemonname').html(pokemonname);
-            $('#pokemontype1').html(pokemontype1);
-
-            try {
-                response.data.types[1].type.name;
-                }
-            catch (e) {
-                $('#pokemontype2').html("");
-                }
+            $('#pokemontype1').html('Type :' + pokemontype1)
+                        
+                        
             
-            let pokemontype2 = response.data.types[1].type.name;
-            
-            // error - html not refreshing
-            $('#pokemontype2').html('/' + pokemontype2);
-
-           
-
             //combining the stat & stat result 
             let pokemonstatname1 = response.data.stats[0].stat.name;
             let pokemonstatname2 = response.data.stats[1].stat.name;
@@ -65,6 +53,19 @@ function NameSearch() {
                 { "name": pokemonstatname6, "stat": pokemonstat6 }
             ];
 
+
+            try {
+                response.data.types[1].type.name;
+                }
+            catch (e) {
+                $('#pokemontype2').html("");
+                makeGraphs(statdata);
+                }
+                
+            let pokemontype2 = response.data.types[1].type.name;
+            
+            $('#pokemontype2').html('/' + pokemontype2);
+            
             makeGraphs(statdata)
         })
 
