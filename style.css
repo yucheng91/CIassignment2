@@ -8,8 +8,12 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-img {
-    background-image:url("background/pk_bg2.jpg");
+#logo{
+    width:50%;
+}
+
+#pokemonimg img {
+    background-image:url("background/pk_bg.jpg");
     background-size:100%;
     border-radius:50px;
 }
@@ -26,13 +30,13 @@ button{
 }
 
 #pokemonstatchart{
-    font-size:10px;
+    font-size:11px;
     text-transform: capitalize;
 }
 
 #screen {
     margin:5%;
     border:10px solid lightgrey;
-    height:800px;
+    height:900px;
     overflow: scroll;
 }
