@@ -2,7 +2,13 @@
 /* global $ */
 
 function NameSearch() {
+    
     let name = document.getElementById("NameInput").value.toLowerCase();
+    if (name > 807){
+        alert(`You have exceeded the Pokemon Index!
+Hint : The Pokedex covered every Pokemon until the Alola Region`);
+    }
+
     //PokeAPI api works by having the pokemon name/Stat right behind the URL
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
 
@@ -24,10 +30,8 @@ function NameSearch() {
             $('#pokemonheight').html('Height :' + pokemonheight + 'm');
             $('#pokemonid').html("#" + pokemonid);
             $('#pokemonname').html(pokemonname);
-            $('#pokemontype1').html('Type :' + pokemontype1)
-                        
-                        
-            
+            $('#pokemontype1').html('Type :' + pokemontype1);
+
             //combining the stat & stat result 
             let pokemonstatname1 = response.data.stats[0].stat.name;
             let pokemonstatname2 = response.data.stats[1].stat.name;
@@ -53,22 +57,25 @@ function NameSearch() {
                 { "name": pokemonstatname6, "stat": pokemonstat6 }
             ];
 
-
             try {
                 response.data.types[1].type.name;
-                }
+            }
             catch (e) {
                 $('#pokemontype2').html("");
                 makeGraphs(statdata);
-                }
-                
-            let pokemontype2 = response.data.types[1].type.name;
-            
-            $('#pokemontype2').html('/' + pokemontype2);
-            
-            makeGraphs(statdata)
-        })
+            }
 
+            let pokemontype2 = response.data.types[1].type.name;
+
+            $('#pokemontype2').html('/' + pokemontype2);
+
+            makeGraphs(statdata);
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+        
+    //may want to add the "stats overview" inside
     function makeGraphs(statdata) {
         // console.log(_.pluck(statdata,"name"));
         var cf = crossfilter(statdata)
