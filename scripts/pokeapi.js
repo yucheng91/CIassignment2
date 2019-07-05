@@ -4,13 +4,13 @@
 function NameSearch() {
     
     let name = document.getElementById("NameInput").value.toLowerCase();
-    if (name > 807){
-        alert(`You have exceeded the Pokemon Index!
-Hint : The Pokedex covered every Pokemon until the Alola Region`);
-    }
 
     //PokeAPI api works by having the pokemon name/Stat right behind the URL
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
+    
+    $.get(pokemonurl).fail(function () {
+        alert("You have input the wrong information");
+    });
 
     axios.get(pokemonurl)
         .then(function(response) {
