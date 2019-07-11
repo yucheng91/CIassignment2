@@ -106,13 +106,101 @@ Hint : index 1-807`);
             .dimension(nameDim)
             .group(statGroup)
         //   .legend(dc.legend());
-
-        dc.renderAll()
+        dc.renderAll();
     }
+    
     function makeTypes1(pokemontype1url){
-        alert(pokemontype1url)
+        axios.get(pokemontype1url)
+        .then(function(response){
+            //dr = damage relation
+            let dr = response.data.damage_relations;
+            
+            //Double Damage From//
+            let ddf1;
+            try {
+                ddf1 = dr.double_damage_from[0].name;
+            } 
+            catch(error){
+                ddf1="";
+            }
+            
+            let ddf2;
+            try {
+                ddf2 = dr.double_damage_from[1].name;
+            } 
+            catch(error){
+                ddf2 = "";
+            }
+            
+            let ddf3;
+            try {
+                ddf3 = dr.double_damage_from[2].name;
+            } 
+            catch(error){
+                ddf3 = "";
+            }
+            
+            if (ddf1 == "") {
+                $('#doubledamagefrom').html("")
+            }else{
+            $('#doubledamagefrom').html("Double Damage from : " + ddf1 + " " + ddf2 + " " + ddf3);
+            }
+            
+            //Double Damage To//
+            let ddt1;
+            try {
+                ddt1 = dr.double_damage_to[0].name;
+            } 
+            catch(error){
+                ddt1="";
+            }
+            
+            let ddt2;
+            try {
+                ddt2 = dr.double_damage_to[1].name;
+            } 
+            catch(error){
+                ddt2 = "";
+            }
+            
+            let ddt3;
+            try {
+                ddt3 = dr.double_damage_to[2].name;
+            } 
+            catch(error){
+                ddt3 = "";
+            }
+            
+            if (ddt1 == "") {
+                $('#doubledamageto').html("");
+            }else{
+            $('#doubledamageto').html("Double Damage to : " + ddt1 + " " + ddt2 + " " + ddt3);
+            }
+            
+            //Half Damage From//
+            
+            //Half Damage To//
+            
+            //No Damage From//
+            
+            //No Damage To//
+            
+            // let double_damage_to = dr.double_damage_to;
+            // let half_damage_from = dr.half_damage_from;
+            // let half_damage_to = dr.half_damage_to;       
+            // let no_damage_from = dr.no_damage_from;
+            // let no_damage_to = dr.no_damage_to;
+
+            // console.log (double_damage_to);
+            // console.log (half_damage_from);
+            // console.log (half_damage_to);
+            // console.log (no_damage_from);
+            // console.log (no_damage_to);
+            
+            })      
     }
+    
     function makeTypes2(pokemontype2url){
-        alert(pokemontype2url)
+        console.log(pokemontype2url)
     }
 }
