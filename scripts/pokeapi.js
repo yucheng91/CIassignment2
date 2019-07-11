@@ -24,7 +24,10 @@ Hint : index 1-807`);
             let pokemonweight = response.data.weight / 10;
             let pokemonheight = response.data.height / 10;
             let pokemontype1 = response.data.types[0].type.name;
+            let pokemontype1url = response.data.types[0].type.url;
             let pokemonid = response.data.id;
+            
+            console.log(pokemontype1url);
 
             //using inner.html to display results on html
             $('#pokemonfront').attr("src", pokemonfront);
@@ -62,21 +65,28 @@ Hint : index 1-807`);
 
             try {
                 response.data.types[1].type.name;
+                response.data.types[1].type.url;
             }
             catch (e) {
                 $('#pokemontype2').html("");
                 makeGraphs(statdata);
+                makeTypes1(pokemontype1url)
             }
 
             let pokemontype2 = response.data.types[1].type.name;
+            let pokemontype2url = response.data.types[1].type.url;
 
             $('#pokemontype2').html('/' + pokemontype2);
-
+            
+            console.log(pokemontype2url)
+            
             makeGraphs(statdata);
+            makeTypes1(pokemontype1url)
+            makeTypes2(pokemontype2url)
         })
-        .catch(function (error) {
-        console.log(error);
-        });
+        // .catch(function (error) {
+        // console.log(error);
+        // });
         
     //may want to add the "stats overview" inside
     function makeGraphs(statdata) {
@@ -90,14 +100,19 @@ Hint : index 1-807`);
             .width(384)
             .height(300)
             .innerRadius(60)
-            .externalLabels(20)
-            .externalRadiusPadding(20)
+            .externalLabels(15)
+            .externalRadiusPadding(30)
             .drawPaths(true)
             .dimension(nameDim)
             .group(statGroup)
         //   .legend(dc.legend());
 
         dc.renderAll()
-
+    }
+    function makeTypes1(pokemontype1url){
+        alert(pokemontype1url)
+    }
+    function makeTypes2(pokemontype2url){
+        alert(pokemontype2url)
     }
 }
