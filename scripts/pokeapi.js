@@ -26,8 +26,6 @@ Hint : index 1-807`);
             let pokemontype1 = response.data.types[0].type.name;
             let pokemontype1url = response.data.types[0].type.url;
             let pokemonid = response.data.id;
-            
-            console.log(pokemontype1url);
 
             //using inner.html to display results on html
             $('#pokemonfront').attr("src", pokemonfront);
@@ -62,22 +60,25 @@ Hint : index 1-807`);
                 { "name": pokemonstatname5, "stat": pokemonstat5 },
                 { "name": pokemonstatname6, "stat": pokemonstat6 }
             ];
-
+            
+            let pokemontype2, pokemontype2url;
             try {
-                response.data.types[1].type.name;
-                response.data.types[1].type.url;
+                pokemontype2 = response.data.types[1].type.name;
+                pokemontype2url = response.data.types[1].type.url;
             }
             catch (e) {
                 $('#pokemontype2').html("");
                 makeGraphs(statdata);
-                makeTypes1(pokemontype1url)
+                makeTypes1(pokemontype1url);
             }
+            finally {
+                if (pokemontype2 != undefined) {
+                    $('#pokemontype2').html('/' + pokemontype2);
+                }
+            }
+            // let pokemontype2 = response.data.types[1].type.name;
+            // let pokemontype2url = response.data.types[1].type.url;
 
-            let pokemontype2 = response.data.types[1].type.name;
-            let pokemontype2url = response.data.types[1].type.url;
-
-            $('#pokemontype2').html('/' + pokemontype2);
-            
             console.log(pokemontype2url)
             
             makeGraphs(statdata);
@@ -141,7 +142,7 @@ Hint : index 1-807`);
             }
             
             if (ddf1 == "") {
-                $('#doubledamagefrom').html("")
+                $('#doubledamagefrom').html("Double Damage from : None")
             }else{
             $('#doubledamagefrom').html("Double Damage from : " + ddf1 + " " + ddf2 + " " + ddf3);
             }
@@ -172,7 +173,7 @@ Hint : index 1-807`);
             }
             
             if (ddt1 == "") {
-                $('#doubledamageto').html("");
+                $('#doubledamageto').html("Double Damage to : None");
             }else{
             $('#doubledamageto').html("Double Damage to : " + ddt1 + " " + ddt2 + " " + ddt3);
             }
