@@ -37,6 +37,7 @@ button{
 #screen {
     margin:5%;
     border:10px solid lightgrey;
-    height:900px;
+    height:90%;
     overflow: scroll;
+    padding:10px;
 }
