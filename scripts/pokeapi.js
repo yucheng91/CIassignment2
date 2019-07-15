@@ -1,8 +1,11 @@
 /* global axios */
 /* global $ */
 
-function NameSearch() {
+$("#results").hide();
 
+function NameSearch() {
+    $("#results").fadeIn(2500);
+    
     let name = document.getElementById("NameInput").value.toLowerCase();
 
     //PokeAPI api works by having the pokemon name/Stat right behind the URL
@@ -314,14 +317,13 @@ Hint : index 1-807`);
                 }
                 else {
                     $('#nodamageto').html("No damage to : " + ndt1 + " " + ndt2 + " " + ndt3);
-                    $('#disclaimer').html("*Only top 3 results from each type are shown");
+                    $('#disclaimer').html(`*Only top 3 results from each type are shown. "None" refer to the first pokemon-type identified`);
                 }
             });
     }
     function makeTypes2(pokemontype2url) {
         axios.get(pokemontype2url)
             .then(function(response) {
-                console.log(response);
                 //dr = damage relation
                 let dr = response.data.damage_relations;
 
