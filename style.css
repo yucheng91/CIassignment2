@@ -6,6 +6,7 @@ body {
     text-align: center;
     background-image:url("background/pokedex.png");
     font-family: 'Lato', sans-serif;
+    color: white;
 }
 
 #logo{
@@ -18,8 +19,19 @@ body {
     border-radius:50px;
 }
 
+#pokeball {
+    position:relative;
+    bottom:4px;
+}
+
 #inputbox {
     padding:10px;
+}
+
+#NameInput {
+    border-radius:50px;
+    width:50%;
+    text-align:center;
 }
 
 button{
@@ -34,10 +46,27 @@ button{
     text-transform: capitalize;
 }
 
+#disclaimer {
+    font-size:10px;
+}
+
+h4 {
+    font-weight:100;
+    color: rgb(33,131,156);
+    padding:3px;
+    font-size:20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(33,131,156);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.8);
+}
+
 #screen {
     margin:5%;
-    border:10px solid lightgrey;
+    border:10px solid white;
     height:90%;
     overflow: scroll;
     padding:10px;
+    border-radius:10px;
+    background-color: rgba(186, 186, 186,0.5);
 }

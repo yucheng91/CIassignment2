@@ -29,14 +29,14 @@ Hint : index 1-807`);
             let pokemontype1url = rd.types[0].type.url;
             let pokemonid = rd.id;
 
-            //using inner.html to display results on html
+            //using inner.html to display results on index.html
             $('#pokemonfront').attr("src", pokemonfront);
             $('#pokemonback').attr("src", pokemonback);
-            $('#pokemonweight').html('Weight :' + pokemonweight + 'kg');
-            $('#pokemonheight').html('Height :' + pokemonheight + 'm');
-            $('#pokemonid').html("#" + pokemonid);
+            $('#pokemonweight').html('Weight : ' + pokemonweight + 'kg');
+            $('#pokemonheight').html('Height : ' + pokemonheight + 'm');
+            $('#pokemonid').html(pokemonid + " ");
             $('#pokemonname').html(pokemonname);
-            $('#pokemontype1').html('Type :' + pokemontype1);
+            $('#pokemontype1').html('Type : ' + pokemontype1);
 
             //combining the stat & stat result 
             let pokemonstatname1 = rd.stats[0].stat.name;
@@ -71,7 +71,7 @@ Hint : index 1-807`);
             catch (e) {
                 $('#pokemontype2').html("");
                 pokemontype2 = "";
-                pokemontype2url =="";
+                pokemontype2url = "";
                 makeGraphs(statdata);
                 makeTypes1(pokemontype1url);
                 $('#doubledamagefrom2').html("");
@@ -85,7 +85,7 @@ Hint : index 1-807`);
                 if (pokemontype2 == "") {
                     $('#pokemontype2').html("");
                 }else{
-                    $('#pokemontype2').html('/' + pokemontype2);
+                    $('#pokemontype2').html(' / ' + pokemontype2);
                 }
             }
             // let pokemontype2 = response.data.types[1].type.name;
@@ -136,7 +136,7 @@ Hint : index 1-807`);
 
                 let ddf2;
                 try {
-                    ddf2 = dr.double_damage_from[1].name;
+                    ddf2 = "/ " + dr.double_damage_from[1].name;
                 }
                 catch (error) {
                     ddf2 = "";
@@ -144,7 +144,7 @@ Hint : index 1-807`);
 
                 let ddf3;
                 try {
-                    ddf3 = dr.double_damage_from[2].name;
+                    ddf3 = "/ " + dr.double_damage_from[2].name;
                 }
                 catch (error) {
                     ddf3 = "";
@@ -168,7 +168,7 @@ Hint : index 1-807`);
 
                 let ddt2;
                 try {
-                    ddt2 = dr.double_damage_to[1].name;
+                    ddt2 = "/ " + dr.double_damage_to[1].name;
                 }
                 catch (error) {
                     ddt2 = "";
@@ -176,7 +176,7 @@ Hint : index 1-807`);
 
                 let ddt3;
                 try {
-                    ddt3 = dr.double_damage_to[2].name;
+                    ddt3 = "/ " + dr.double_damage_to[2].name;
                 }
                 catch (error) {
                     ddt3 = "";
@@ -200,7 +200,7 @@ Hint : index 1-807`);
 
                 let hdf2;
                 try {
-                    hdf2 = dr.half_damage_from[1].name;
+                    hdf2 = "/ " + dr.half_damage_from[1].name;
                 }
                 catch (error) {
                     hdf2 = "";
@@ -208,7 +208,7 @@ Hint : index 1-807`);
 
                 let hdf3;
                 try {
-                    hdf3 = dr.half_damage_from[2].name;
+                    hdf3 = "/ " + dr.half_damage_from[2].name;
                 }
                 catch (error) {
                     hdf3 = "";
@@ -232,7 +232,7 @@ Hint : index 1-807`);
 
                 let hdt2;
                 try {
-                    hdt2 = dr.half_damage_to[1].name;
+                    hdt2 = "/ " + dr.half_damage_to[1].name;
                 }
                 catch (error) {
                     hdt2 = "";
@@ -240,7 +240,7 @@ Hint : index 1-807`);
 
                 let hdt3;
                 try {
-                    hdt3 = dr.half_damage_to[2].name;
+                    hdt3 = "/ " + dr.half_damage_to[2].name;
                 }
                 catch (error) {
                     hdt3 = "";
@@ -264,7 +264,7 @@ Hint : index 1-807`);
 
                 let ndf2;
                 try {
-                    ndf2 = dr.no_damage_from[1].name;
+                    ndf2 = "/ " + dr.no_damage_from[1].name;
                 }
                 catch (error) {
                     ndf2 = "";
@@ -272,7 +272,7 @@ Hint : index 1-807`);
 
                 let ndf3;
                 try {
-                    ndf3 = dr.no_damage_from[2].name;
+                    ndf3 = "/ " + dr.no_damage_from[2].name;
                 }
                 catch (error) {
                     ndf3 = "";
@@ -295,7 +295,7 @@ Hint : index 1-807`);
 
                 let ndt2;
                 try {
-                    ndt2 = dr.no_damage_to[1].name;
+                    ndt2 = "/ " + dr.no_damage_to[1].name;
                 }
                 catch (error) {
                     ndt2 = "";
@@ -303,7 +303,7 @@ Hint : index 1-807`);
 
                 let ndt3;
                 try {
-                    ndt3 = dr.no_damage_to[2].name;
+                    ndt3 = "/ " + dr.no_damage_to[2].name;
                 }
                 catch (error) {
                     ndt3 = "";
@@ -314,6 +314,7 @@ Hint : index 1-807`);
                 }
                 else {
                     $('#nodamageto').html("No damage to : " + ndt1 + " " + ndt2 + " " + ndt3);
+                    $('#disclaimer').html("*Only top 3 results from each type are shown");
                 }
             });
     }
@@ -327,7 +328,7 @@ Hint : index 1-807`);
                 //Double Damage From//
                 let ddf4;
                 try {
-                    ddf4 = dr.double_damage_from[0].name;
+                    ddf4 = "/ " + dr.double_damage_from[0].name;
                 }
                 catch (error) {
                     ddf4 = "";
@@ -335,7 +336,7 @@ Hint : index 1-807`);
 
                 let ddf5;
                 try {
-                    ddf5 = dr.double_damage_from[1].name;
+                    ddf5 = "/ " + dr.double_damage_from[1].name;
                 }
                 catch (error) {
                     ddf5 = "";
@@ -343,7 +344,7 @@ Hint : index 1-807`);
 
                 let ddf6;
                 try {
-                    ddf6 = dr.double_damage_from[2].name;
+                    ddf6 = "/ " + dr.double_damage_from[2].name;
                 }
                 catch (error) {
                     ddf6 = "";
@@ -359,7 +360,7 @@ Hint : index 1-807`);
                 //Double Damage To//
                 let ddt4;
                 try {
-                    ddt4 = dr.double_damage_to[0].name;
+                    ddt4 = "/ " + dr.double_damage_to[0].name;
                 }
                 catch (error) {
                     ddt4 = "";
@@ -367,7 +368,7 @@ Hint : index 1-807`);
 
                 let ddt5;
                 try {
-                    ddt5 = dr.double_damage_to[1].name;
+                    ddt5 = "/ " + dr.double_damage_to[1].name;
                 }
                 catch (error) {
                     ddt5 = "";
@@ -375,7 +376,7 @@ Hint : index 1-807`);
 
                 let ddt6;
                 try {
-                    ddt6 = dr.double_damage_to[2].name;
+                    ddt6 = "/ " + dr.double_damage_to[2].name;
                 }
                 catch (error) {
                     ddt6 = "";
@@ -391,7 +392,7 @@ Hint : index 1-807`);
                 //Half Damage From//
                 let hdf4;
                 try {
-                    hdf4 = dr.half_damage_from[0].name;
+                    hdf4 = "/ " + dr.half_damage_from[0].name;
                 }
                 catch (error) {
                     hdf4 = "";
@@ -399,7 +400,7 @@ Hint : index 1-807`);
 
                 let hdf5;
                 try {
-                    hdf5 = dr.half_damage_from[1].name;
+                    hdf5 = "/ " + dr.half_damage_from[1].name;
                 }
                 catch (error) {
                     hdf5 = "";
@@ -407,7 +408,7 @@ Hint : index 1-807`);
 
                 let hdf6;
                 try {
-                    hdf6 = dr.half_damage_from[2].name;
+                    hdf6 = "/ " + dr.half_damage_from[2].name;
                 }
                 catch (error) {
                     hdf6 = "";
@@ -423,7 +424,7 @@ Hint : index 1-807`);
                 //Half Damage To//
                 let hdt4;
                 try {
-                    hdt4 = dr.half_damage_to[0].name;
+                    hdt4 = "/ " + dr.half_damage_to[0].name;
                 }
                 catch (error) {
                     hdt4 = "";
@@ -431,7 +432,7 @@ Hint : index 1-807`);
 
                 let hdt5;
                 try {
-                    hdt5 = dr.half_damage_to[1].name;
+                    hdt5 = "/ " + dr.half_damage_to[1].name;
                 }
                 catch (error) {
                     hdt5 = "";
@@ -439,7 +440,7 @@ Hint : index 1-807`);
 
                 let hdt6;
                 try {
-                    hdt6 = dr.half_damage_to[2].name;
+                    hdt6 = "/ " + dr.half_damage_to[2].name;
                 }
                 catch (error) {
                     hdt6 = "";
@@ -455,7 +456,7 @@ Hint : index 1-807`);
                 //No Damage From//
                 let ndf4;
                 try {
-                    ndf4 = dr.no_damage_from[0].name;
+                    ndf4 = "/ " + dr.no_damage_from[0].name;
                 }
                 catch (error) {
                     ndf4 = "";
@@ -463,7 +464,7 @@ Hint : index 1-807`);
 
                 let ndf5;
                 try {
-                    ndf5 = dr.no_damage_from[1].name;
+                    ndf5 = "/ " + dr.no_damage_from[1].name;
                 }
                 catch (error) {
                     ndf5 = "";
@@ -471,7 +472,7 @@ Hint : index 1-807`);
 
                 let ndf6;
                 try {
-                    ndf6 = dr.no_damage_from[2].name;
+                    ndf6 = "/ " + dr.no_damage_from[2].name;
                 }
                 catch (error) {
                     ndf6 = "";
@@ -486,7 +487,7 @@ Hint : index 1-807`);
                 //No Damage To//
                 let ndt4;
                 try {
-                    ndt4 = dr.no_damage_to[0].name;
+                    ndt4 = "/ " + dr.no_damage_to[0].name;
                 }
                 catch (error) {
                     ndt4 = "";
@@ -494,7 +495,7 @@ Hint : index 1-807`);
 
                 let ndt5;
                 try {
-                    ndt5 = dr.no_damage_to[1].name;
+                    ndt5 ="/ " + dr.no_damage_to[1].name;
                 }
                 catch (error) {
                     ndt5 = "";
@@ -502,7 +503,7 @@ Hint : index 1-807`);
 
                 let ndt6;
                 try {
-                    ndt6 = dr.no_damage_to[2].name;
+                    ndt6 = "/ " + dr.no_damage_to[2].name;
                 }
                 catch (error) {
                     ndt6 = "";
