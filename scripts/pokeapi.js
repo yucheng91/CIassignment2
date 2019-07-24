@@ -3,7 +3,7 @@
 
 $("#results").hide();
 
-function NameSearch() {
+function NameSearch(pokemon) {
     $("#results").fadeIn(2500);
     
     let name = document.getElementById("NameInput").value.toLowerCase();
