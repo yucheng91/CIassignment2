@@ -39,7 +39,14 @@ Hint : index 1-807`);
             $('#pokemonheight').html('Height : ' + pokemonheight + 'm');
             $('#pokemonid').html(pokemonid + " ");
             $('#pokemonname').html(pokemonname);
-            $('#pokemontype1').html('Type : ' + pokemontype1);
+            $('#pokemontype').html("Type: ");
+            $('#pokemontype1').html(pokemontype1);
+            $('#ddf').html("Double Damange From : ");
+            $('#ddt').html("Double Damange To : ");
+            $('#hdf').html("Half Damange From : ");
+            $('#hdt').html("Half Damange To : ");
+            $('#ndf').html("No Damange From : ");
+            $('#ndt').html("No Damange To : ");
 
             //combining the stat & stat result 
             let pokemonstatname1 = rd.stats[0].stat.name;
@@ -88,19 +95,13 @@ Hint : index 1-807`);
                 if (pokemontype2 == "") {
                     $('#pokemontype2').html("");
                 }else{
-                    $('#pokemontype2').html(' / ' + pokemontype2);
+                    $('#pokemontype2').html(pokemontype2);
                 }
             }
-            // let pokemontype2 = response.data.types[1].type.name;
-            // let pokemontype2url = response.data.types[1].type.url;
-
             makeGraphs(statdata);
             makeTypes1(pokemontype1url);
             makeTypes2(pokemontype2url);
         });
-    // .catch(function (error) {
-    // console.log(error);
-    // });
 
     //may want to add the "stats overview" inside
     function makeGraphs(statdata) {
@@ -154,10 +155,10 @@ Hint : index 1-807`);
                 }
 
                 if (ddf1 == "") {
-                    $('#doubledamagefrom').html("Double Damage from : None");
+                    $('#doubledamagefrom').html("None");
                 }
                 else {
-                    $('#doubledamagefrom').html("Double Damage from : " + ddf1 + " " + ddf2 + " " + ddf3);
+                    $('#doubledamagefrom').html(ddf1 + " " + ddf2 + " " + ddf3);
                 }
 
                 //Double Damage To//
@@ -186,10 +187,10 @@ Hint : index 1-807`);
                 }
 
                 if (ddt1 == "") {
-                    $('#doubledamageto').html("Double Damage to : None");
+                    $('#doubledamageto').html("None");
                 }
                 else {
-                    $('#doubledamageto').html("Double Damage to : " + ddt1 + " " + ddt2 + " " + ddt3);
+                    $('#doubledamageto').html(ddt1 + " " + ddt2 + " " + ddt3);
                 }
 
                 //Half Damage From//
@@ -218,10 +219,10 @@ Hint : index 1-807`);
                 }
 
                 if (hdf1 == "") {
-                    $('#halfdamagefrom').html("Half damage from : None");
+                    $('#halfdamagefrom').html("None");
                 }
                 else {
-                    $('#halfdamagefrom').html("Half damage from : " + hdf1 + " " + hdf2 + " " + hdf3);
+                    $('#halfdamagefrom').html(hdf1 + " " + hdf2 + " " + hdf3);
                 }
 
                 //Half Damage To//
@@ -250,10 +251,10 @@ Hint : index 1-807`);
                 }
 
                 if (hdt1 == "") {
-                    $('#halfdamageto').html("Half damage to : None");
+                    $('#halfdamageto').html("None");
                 }
                 else {
-                    $('#halfdamageto').html("Half damage to : " + hdt1 + " " + hdt2 + " " + hdt3);
+                    $('#halfdamageto').html(hdt1 + " " + hdt2 + " " + hdt3);
                 }
 
                 //No Damage From//
@@ -282,10 +283,10 @@ Hint : index 1-807`);
                 }
 
                 if (ndf1 == "") {
-                    $('#nodamagefrom').html("No damage from : None");
+                    $('#nodamagefrom').html("None");
                 }
                 else {
-                    $('#nodamagefrom').html("No damage from : " + ndf1 + " " + ndf2 + " " + ndf3);
+                    $('#nodamagefrom').html(ndf1 + " " + ndf2 + " " + ndf3);
                 }
                 //No Damage To//
                 let ndt1;
@@ -313,11 +314,10 @@ Hint : index 1-807`);
                 }
 
                 if (ndt1 == "") {
-                    $('#nodamageto').html("No damage to : None");
+                    $('#nodamageto').html("None");
                 }
                 else {
-                    $('#nodamageto').html("No damage to : " + ndt1 + " " + ndt2 + " " + ndt3);
-                    $('#disclaimer').html(`*Only top 3 results from each type are shown. "None" refer to the first pokemon-type identified`);
+                    $('#nodamageto').html(ndt1 + " " + ndt2 + " " + ndt3);
                 }
             });
     }
@@ -330,7 +330,7 @@ Hint : index 1-807`);
                 //Double Damage From//
                 let ddf4;
                 try {
-                    ddf4 = "/ " + dr.double_damage_from[0].name;
+                    ddf4 = dr.double_damage_from[0].name;
                 }
                 catch (error) {
                     ddf4 = "";
@@ -356,13 +356,13 @@ Hint : index 1-807`);
                     $('#doubledamagefrom2').html("");
                 }
                 else {
-                    $('#doubledamagefrom2').html(" " + ddf4 + " " + ddf5 + " " + ddf6);
+                    $('#doubledamagefrom2').html(ddf4 + " " + ddf5 + " " + ddf6);
                 }
 
                 //Double Damage To//
                 let ddt4;
                 try {
-                    ddt4 = "/ " + dr.double_damage_to[0].name;
+                    ddt4 = dr.double_damage_to[0].name;
                 }
                 catch (error) {
                     ddt4 = "";
@@ -388,13 +388,13 @@ Hint : index 1-807`);
                     $('#doubledamageto2').html("");
                 }
                 else {
-                    $('#doubledamageto2').html(" " + ddt4 + " " + ddt5 + " " + ddt6);
+                    $('#doubledamageto2').html(ddt4 + " " + ddt5 + " " + ddt6);
                 }
 
                 //Half Damage From//
                 let hdf4;
                 try {
-                    hdf4 = "/ " + dr.half_damage_from[0].name;
+                    hdf4 = dr.half_damage_from[0].name;
                 }
                 catch (error) {
                     hdf4 = "";
@@ -420,13 +420,13 @@ Hint : index 1-807`);
                     $('#halfdamagefrom2').html("");
                 }
                 else {
-                    $('#halfdamagefrom2').html(" " + hdf4 + " " + hdf5 + " " + hdf6);
+                    $('#halfdamagefrom2').html(hdf4 + " " + hdf5 + " " + hdf6);
                 }
 
                 //Half Damage To//
                 let hdt4;
                 try {
-                    hdt4 = "/ " + dr.half_damage_to[0].name;
+                    hdt4 = dr.half_damage_to[0].name;
                 }
                 catch (error) {
                     hdt4 = "";
@@ -452,13 +452,13 @@ Hint : index 1-807`);
                     $('#halfdamageto2').html("");
                 }
                 else {
-                    $('#halfdamageto2').html(" " + hdt4 + " " + hdt5 + " " + hdt6);
+                    $('#halfdamageto2').html(hdt4 + " " + hdt5 + " " + hdt6);
                 }
 
                 //No Damage From//
                 let ndf4;
                 try {
-                    ndf4 = "/ " + dr.no_damage_from[0].name;
+                    ndf4 = dr.no_damage_from[0].name;
                 }
                 catch (error) {
                     ndf4 = "";
@@ -484,12 +484,12 @@ Hint : index 1-807`);
                     $('#nodamagefrom2').html("");
                 }
                 else {
-                    $('#nodamagefrom2').html(" " + ndf4 + " " + ndf5 + " " + ndf6);
+                    $('#nodamagefrom2').html(ndf4 + " " + ndf5 + " " + ndf6);
                 }
                 //No Damage To//
                 let ndt4;
                 try {
-                    ndt4 = "/ " + dr.no_damage_to[0].name;
+                    ndt4 = dr.no_damage_to[0].name;
                 }
                 catch (error) {
                     ndt4 = "";
@@ -515,7 +515,7 @@ Hint : index 1-807`);
                     $('#nodamageto2').html("");
                 }
                 else {
-                    $('#nodamageto2').html(" " + ndt4 + " " + ndt5 + " " + ndt6);
+                    $('#nodamageto2').html(ndt4 + " " + ndt5 + " " + ndt6);
                 }
             });
         }
