@@ -84,7 +84,7 @@ h4 {
     border: none;
 }
 #pokemontype1 {
-    border : 1px solid white;
+    border : 2px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
     margin:3px;
@@ -94,7 +94,7 @@ h4 {
     border: none;
 }
 #pokemontype2 {
-    border : 1px solid white;
+    border : 2px solid white;
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
     margin:3px;
@@ -104,7 +104,7 @@ h4 {
     border: none;
 }
 #doubledamagefrom {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
@@ -123,7 +123,7 @@ h4 {
     border: none;
 }
 #doubledamageto {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
@@ -138,11 +138,11 @@ h4 {
     border-radius: 10px;
 }
 
-#halfamagefrom:empty { 
+#halfdamagefrom:empty { 
     border: none;
 }
 #halfdamagefrom {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
@@ -161,7 +161,7 @@ h4 {
     border: none;
 }
 #halfdamageto {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
@@ -182,7 +182,7 @@ h4 {
     border: none;
 }
 #nodamagefrom {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
@@ -201,7 +201,7 @@ h4 {
     border: none;
 }
 #nodamageto {
-    border : 1px solid white;
+    border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
