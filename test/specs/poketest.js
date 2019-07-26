@@ -13,4 +13,11 @@ describe("Pokemon Search", function() {
             expect(pokemonurl).toEqual("https://pokeapi.co/api/v2/pokemon/382");
         });
     });
+    describe('wrong name Search', function() {
+        it('should return valid pokemon url', function() {
+            let index = "mickeymouse";
+            let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + index;
+            expect(pokemonurl).toBeDefined();
+        });
+    });
 });

@@ -54,7 +54,6 @@ button{
 }
 
 #damageoverview {
-    color: #444444;
     text-align:center;
 }
 
@@ -78,7 +77,11 @@ h4 {
     background-color: rgba(186, 186, 186,0.5);
 }
 
-/*CSS setting to group up the overview by respective type*/
+/*CSS setting to group up the overview by respective type for easy differentiation*/
+
+.toandfrom {
+    font-weight: normal;
+}
 
 #pokemontype1:empty{
     border: none;
@@ -100,118 +103,20 @@ h4 {
     margin:3px;
 }
 
-#doubledamagefrom:empty { 
-    border: none;
+.ov1:empty {
+    border:none;
 }
-#doubledamagefrom {
-    border : 1px solid rgb(33,131,156);
+
+.ov1 {border : 1px solid rgb(33,131,156);
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
 }
 
-
-#doubledamagefrom2:empty { 
-    border: none;
-}
-#doubledamagefrom2 {
-    border : 1px solid white;
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-#doubledamageto:empty { 
-    border: none;
-}
-#doubledamageto {
-    border : 1px solid rgb(33,131,156);
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#doubledamageto2:empty { 
-    border: none;
-}
-#doubledamageto2 {
-    border : 1px solid white;
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-#halfdamagefrom:empty { 
-    border: none;
-}
-#halfdamagefrom {
-    border : 1px solid rgb(33,131,156);
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#halfdamagefrom2:empty { 
-    border: none;
-}
-#halfdamagefrom2 {
-    border : 1px solid white;
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-#halfdamageto:empty { 
-    border: none;
-}
-#halfdamageto {
-    border : 1px solid rgb(33,131,156);
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#halfdamageto2:empty { 
+.ov2:empty { 
     border: none;
 }
 
-#halfdamageto2 {
-    border : 1px solid white;
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#nodamagefrom:empty { 
-    border: none;
-}
-#nodamagefrom {
-    border : 1px solid rgb(33,131,156);
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#nodamagefrom2:empty { 
-    border: none;
-}
-#nodamagefrom2 {
-    border : 1px solid white;
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-#nodamageto:empty { 
-    border: none;
-}
-#nodamageto {
-    border : 1px solid rgb(33,131,156);
-    padding : 1px 3px 1px 3px;
-    border-radius: 10px;
-}
-
-
-#nodamageto2:empty { 
-    border: none;
-}
-
-#nodamageto2 {
+.ov2 {
     border : 1px solid white;
     padding : 1px 3px 1px 3px;
     border-radius: 10px;
