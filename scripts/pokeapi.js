@@ -153,16 +153,38 @@ Hint : index 1-807`);
                 catch (error) {
                     ddf3 = "";
                 }
+                let ddf4;
+                try {
+                    ddf4 = "/ " + dr.double_damage_from[3].name;
+                }
+                catch (error) {
+                    ddf4 = "";
+                }
 
+                let ddf5;
+                try {
+                    ddf5 = "/ " + dr.double_damage_from[4].name;
+                }
+                catch (error) {
+                    ddf5 = "";
+                }
+
+                let ddf6;
+                try {
+                    ddf6 = "/ " + dr.double_damage_from[5].name;
+                }
+                catch (error) {
+                    ddf6 = "";
+                }
                 if (ddf1 == "") {
                     $('#doubledamagefrom').html("");
                 }
                 else {
-                    $('#doubledamagefrom').html(ddf1 + " " + ddf2 + " " + ddf3);
+                    $('#doubledamagefrom').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6);
                 }
 
                 //Double Damage To//
-                let ddt1;
+                               let ddt1;
                 try {
                     ddt1 = dr.double_damage_to[0].name;
                 }
@@ -185,13 +207,36 @@ Hint : index 1-807`);
                 catch (error) {
                     ddt3 = "";
                 }
+                let ddt4;
+                try {
+                    ddt4 = "/ " + dr.double_damage_to[3].name;
+                }
+                catch (error) {
+                    ddt4 = "";
+                }
 
+                let ddt5;
+                try {
+                    ddt5 = "/ " + dr.double_damage_to[4].name;
+                }
+                catch (error) {
+                    ddt5 = "";
+                }
+
+                let ddt6;
+                try {
+                    ddt6 = "/ " + dr.double_damage_to[5].name;
+                }
+                catch (error) {
+                    ddt6 = "";
+                }
                 if (ddt1 == "") {
                     $('#doubledamageto').html("");
                 }
                 else {
-                    $('#doubledamageto').html(ddt1 + " " + ddt2 + " " + ddt3);
+                    $('#doubledamageto').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6);
                 }
+
 
                 //Half Damage From//
                 let hdf1;
@@ -217,12 +262,34 @@ Hint : index 1-807`);
                 catch (error) {
                     hdf3 = "";
                 }
+                let hdf4;
+                try {
+                    hdf4 = "/ " + dr.half_damage_from[3].name;
+                }
+                catch (error) {
+                    hdf4 = "";
+                }
 
+                let hdf5;
+                try {
+                    hdf5 = "/ " + dr.half_damage_from[4].name;
+                }
+                catch (error) {
+                    hdf5 = "";
+                }
+
+                let hdf6;
+                try {
+                    hdf6 = "/ " + dr.half_damage_from[5].name;
+                }
+                catch (error) {
+                    hdf6 = "";
+                }
                 if (hdf1 == "") {
                     $('#halfdamagefrom').html("");
                 }
                 else {
-                    $('#halfdamagefrom').html(hdf1 + " " + hdf2 + " " + hdf3);
+                    $('#halfdamagefrom').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6);
                 }
 
                 //Half Damage To//
@@ -249,13 +316,36 @@ Hint : index 1-807`);
                 catch (error) {
                     hdt3 = "";
                 }
+                let hdt4;
+                try {
+                    hdt4 = "/ " + dr.half_damage_to[3].name;
+                }
+                catch (error) {
+                    hdt4 = "";
+                }
 
+                let hdt5;
+                try {
+                    hdt5 = "/ " + dr.half_damage_to[4].name;
+                }
+                catch (error) {
+                    hdt5 = "";
+                }
+
+                let hdt6;
+                try {
+                    hdt6 = "/ " + dr.half_damage_to[5].name;
+                }
+                catch (error) {
+                    hdt6 = "";
+                }
                 if (hdt1 == "") {
                     $('#halfdamageto').html("");
                 }
                 else {
-                    $('#halfdamageto').html(hdt1 + " " + hdt2 + " " + hdt3);
+                    $('#halfdamageto').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6);
                 }
+
 
                 //No Damage From//
                 let ndf1;
@@ -281,13 +371,36 @@ Hint : index 1-807`);
                 catch (error) {
                     ndf3 = "";
                 }
+                let ndf4;
+                try {
+                    ndf4 = "/" + dr.no_damage_from[3].name;
+                }
+                catch (error) {
+                    ndf4 = "";
+                }
 
+                let ndf5;
+                try {
+                    ndf5 = "/ " + dr.no_damage_from[4].name;
+                }
+                catch (error) {
+                    ndf5 = "";
+                }
+
+                let ndf6;
+                try {
+                    ndf6 = "/ " + dr.no_damage_from[5].name;
+                }
+                catch (error) {
+                    ndf6 = "";
+                }
                 if (ndf1 == "") {
                     $('#nodamagefrom').html("");
                 }
                 else {
-                    $('#nodamagefrom').html(ndf1 + " " + ndf2 + " " + ndf3);
+                    $('#nodamagefrom').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6);
                 }
+
                 //No Damage To//
                 let ndt1;
                 try {
@@ -312,12 +425,34 @@ Hint : index 1-807`);
                 catch (error) {
                     ndt3 = "";
                 }
+                let ndt4;
+                try {
+                    ndt4 = "/ " + dr.no_damage_to[3].name;
+                }
+                catch (error) {
+                    ndt4 = "";
+                }
 
+                let ndt5;
+                try {
+                    ndt5 = "/ " + dr.no_damage_to[4].name;
+                }
+                catch (error) {
+                    ndt5 = "";
+                }
+
+                let ndt6;
+                try {
+                    ndt6 = "/ " + dr.no_damage_to[5].name;
+                }
+                catch (error) {
+                    ndt6 = "";
+                }
                 if (ndt1 == "") {
                     $('#nodamageto').html("");
                 }
                 else {
-                    $('#nodamageto').html(ndt1 + " " + ndt2 + " " + ndt3);
+                    $('#nodamageto').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6);
                 }
             });
     }
@@ -328,9 +463,32 @@ Hint : index 1-807`);
                 let dr = response.data.damage_relations;
 
                 //Double Damage From//
+                let ddf1;
+                try {
+                    ddf1 = dr.double_damage_from[0].name;
+                }
+                catch (error) {
+                    ddf1 = "";
+                }
+
+                let ddf2;
+                try {
+                    ddf2 = "/ " + dr.double_damage_from[1].name;
+                }
+                catch (error) {
+                    ddf2 = "";
+                }
+
+                let ddf3;
+                try {
+                    ddf3 = "/ " + dr.double_damage_from[2].name;
+                }
+                catch (error) {
+                    ddf3 = "";
+                }
                 let ddf4;
                 try {
-                    ddf4 = dr.double_damage_from[0].name;
+                    ddf4 = "/ " + dr.double_damage_from[3].name;
                 }
                 catch (error) {
                     ddf4 = "";
@@ -338,7 +496,7 @@ Hint : index 1-807`);
 
                 let ddf5;
                 try {
-                    ddf5 = "/ " + dr.double_damage_from[1].name;
+                    ddf5 = "/ " + dr.double_damage_from[4].name;
                 }
                 catch (error) {
                     ddf5 = "";
@@ -346,23 +504,45 @@ Hint : index 1-807`);
 
                 let ddf6;
                 try {
-                    ddf6 = "/ " + dr.double_damage_from[2].name;
+                    ddf6 = "/ " + dr.double_damage_from[5].name;
                 }
                 catch (error) {
                     ddf6 = "";
                 }
-
-                if (ddf4 == "") {
+                if (ddf1 == "") {
                     $('#doubledamagefrom2').html("");
                 }
                 else {
-                    $('#doubledamagefrom2').html(ddf4 + " " + ddf5 + " " + ddf6);
+                    $('#doubledamagefrom2').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6);
                 }
 
                 //Double Damage To//
+                               let ddt1;
+                try {
+                    ddt1 = dr.double_damage_to[0].name;
+                }
+                catch (error) {
+                    ddt1 = "";
+                }
+
+                let ddt2;
+                try {
+                    ddt2 = "/ " + dr.double_damage_to[1].name;
+                }
+                catch (error) {
+                    ddt2 = "";
+                }
+
+                let ddt3;
+                try {
+                    ddt3 = "/ " + dr.double_damage_to[2].name;
+                }
+                catch (error) {
+                    ddt3 = "";
+                }
                 let ddt4;
                 try {
-                    ddt4 = dr.double_damage_to[0].name;
+                    ddt4 = "/ " + dr.double_damage_to[3].name;
                 }
                 catch (error) {
                     ddt4 = "";
@@ -370,7 +550,7 @@ Hint : index 1-807`);
 
                 let ddt5;
                 try {
-                    ddt5 = "/ " + dr.double_damage_to[1].name;
+                    ddt5 = "/ " + dr.double_damage_to[4].name;
                 }
                 catch (error) {
                     ddt5 = "";
@@ -378,23 +558,46 @@ Hint : index 1-807`);
 
                 let ddt6;
                 try {
-                    ddt6 = "/ " + dr.double_damage_to[2].name;
+                    ddt6 = "/ " + dr.double_damage_to[5].name;
                 }
                 catch (error) {
                     ddt6 = "";
                 }
-
-                if (ddt4 == "") {
+                if (ddt1 == "") {
                     $('#doubledamageto2').html("");
                 }
                 else {
-                    $('#doubledamageto2').html(ddt4 + " " + ddt5 + " " + ddt6);
+                    $('#doubledamageto2').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6);
                 }
 
+
                 //Half Damage From//
+                let hdf1;
+                try {
+                    hdf1 = dr.half_damage_from[0].name;
+                }
+                catch (error) {
+                    hdf1 = "";
+                }
+
+                let hdf2;
+                try {
+                    hdf2 = "/ " + dr.half_damage_from[1].name;
+                }
+                catch (error) {
+                    hdf2 = "";
+                }
+
+                let hdf3;
+                try {
+                    hdf3 = "/ " + dr.half_damage_from[2].name;
+                }
+                catch (error) {
+                    hdf3 = "";
+                }
                 let hdf4;
                 try {
-                    hdf4 = dr.half_damage_from[0].name;
+                    hdf4 = "/ " + dr.half_damage_from[3].name;
                 }
                 catch (error) {
                     hdf4 = "";
@@ -402,7 +605,7 @@ Hint : index 1-807`);
 
                 let hdf5;
                 try {
-                    hdf5 = "/ " + dr.half_damage_from[1].name;
+                    hdf5 = "/ " + dr.half_damage_from[4].name;
                 }
                 catch (error) {
                     hdf5 = "";
@@ -410,23 +613,45 @@ Hint : index 1-807`);
 
                 let hdf6;
                 try {
-                    hdf6 = "/ " + dr.half_damage_from[2].name;
+                    hdf6 = "/ " + dr.half_damage_from[5].name;
                 }
                 catch (error) {
                     hdf6 = "";
                 }
-
-                if (hdf4 == "") {
+                if (hdf1 == "") {
                     $('#halfdamagefrom2').html("");
                 }
                 else {
-                    $('#halfdamagefrom2').html(hdf4 + " " + hdf5 + " " + hdf6);
+                    $('#halfdamagefrom2').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6);
                 }
 
                 //Half Damage To//
+                let hdt1;
+                try {
+                    hdt1 = dr.half_damage_to[0].name;
+                }
+                catch (error) {
+                    hdt1 = "";
+                }
+
+                let hdt2;
+                try {
+                    hdt2 = "/ " + dr.half_damage_to[1].name;
+                }
+                catch (error) {
+                    hdt2 = "";
+                }
+
+                let hdt3;
+                try {
+                    hdt3 = "/ " + dr.half_damage_to[2].name;
+                }
+                catch (error) {
+                    hdt3 = "";
+                }
                 let hdt4;
                 try {
-                    hdt4 = dr.half_damage_to[0].name;
+                    hdt4 = "/ " + dr.half_damage_to[3].name;
                 }
                 catch (error) {
                     hdt4 = "";
@@ -434,7 +659,7 @@ Hint : index 1-807`);
 
                 let hdt5;
                 try {
-                    hdt5 = "/ " + dr.half_damage_to[1].name;
+                    hdt5 = "/ " + dr.half_damage_to[4].name;
                 }
                 catch (error) {
                     hdt5 = "";
@@ -442,23 +667,46 @@ Hint : index 1-807`);
 
                 let hdt6;
                 try {
-                    hdt6 = "/ " + dr.half_damage_to[2].name;
+                    hdt6 = "/ " + dr.half_damage_to[5].name;
                 }
                 catch (error) {
                     hdt6 = "";
                 }
-
-                if (hdt4 == "") {
+                if (hdt1 == "") {
                     $('#halfdamageto2').html("");
                 }
                 else {
-                    $('#halfdamageto2').html(hdt4 + " " + hdt5 + " " + hdt6);
+                    $('#halfdamageto2').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6);
                 }
 
+
                 //No Damage From//
+                let ndf1;
+                try {
+                    ndf1 = dr.no_damage_from[0].name;
+                }
+                catch (error) {
+                    ndf1 = "";
+                }
+
+                let ndf2;
+                try {
+                    ndf2 = "/ " + dr.no_damage_from[1].name;
+                }
+                catch (error) {
+                    ndf2 = "";
+                }
+
+                let ndf3;
+                try {
+                    ndf3 = "/ " + dr.no_damage_from[2].name;
+                }
+                catch (error) {
+                    ndf3 = "";
+                }
                 let ndf4;
                 try {
-                    ndf4 = dr.no_damage_from[0].name;
+                    ndf4 = "/" + dr.no_damage_from[3].name;
                 }
                 catch (error) {
                     ndf4 = "";
@@ -466,7 +714,7 @@ Hint : index 1-807`);
 
                 let ndf5;
                 try {
-                    ndf5 = "/ " + dr.no_damage_from[1].name;
+                    ndf5 = "/ " + dr.no_damage_from[4].name;
                 }
                 catch (error) {
                     ndf5 = "";
@@ -474,22 +722,45 @@ Hint : index 1-807`);
 
                 let ndf6;
                 try {
-                    ndf6 = "/ " + dr.no_damage_from[2].name;
+                    ndf6 = "/ " + dr.no_damage_from[5].name;
                 }
                 catch (error) {
                     ndf6 = "";
                 }
-
-                if (ndf4 == "") {
+                if (ndf1 == "") {
                     $('#nodamagefrom2').html("");
                 }
                 else {
-                    $('#nodamagefrom2').html(ndf4 + " " + ndf5 + " " + ndf6);
+                    $('#nodamagefrom2').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6);
                 }
+
                 //No Damage To//
+                let ndt1;
+                try {
+                    ndt1 = dr.no_damage_to[0].name;
+                }
+                catch (error) {
+                    ndt1 = "";
+                }
+
+                let ndt2;
+                try {
+                    ndt2 = "/ " + dr.no_damage_to[1].name;
+                }
+                catch (error) {
+                    ndt2 = "";
+                }
+
+                let ndt3;
+                try {
+                    ndt3 = "/ " + dr.no_damage_to[2].name;
+                }
+                catch (error) {
+                    ndt3 = "";
+                }
                 let ndt4;
                 try {
-                    ndt4 = dr.no_damage_to[0].name;
+                    ndt4 = "/ " + dr.no_damage_to[3].name;
                 }
                 catch (error) {
                     ndt4 = "";
@@ -497,7 +768,7 @@ Hint : index 1-807`);
 
                 let ndt5;
                 try {
-                    ndt5 ="/ " + dr.no_damage_to[1].name;
+                    ndt5 = "/ " + dr.no_damage_to[4].name;
                 }
                 catch (error) {
                     ndt5 = "";
@@ -505,17 +776,16 @@ Hint : index 1-807`);
 
                 let ndt6;
                 try {
-                    ndt6 = "/ " + dr.no_damage_to[2].name;
+                    ndt6 = "/ " + dr.no_damage_to[5].name;
                 }
                 catch (error) {
                     ndt6 = "";
                 }
-
-                if (ndt4 == "") {
+                if (ndt1 == "") {
                     $('#nodamageto2').html("");
                 }
                 else {
-                    $('#nodamageto2').html(ndt4 + " " + ndt5 + " " + ndt6);
+                    $('#nodamageto2').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6);
                 }
             });
         }
