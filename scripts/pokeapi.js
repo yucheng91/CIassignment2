@@ -1,5 +1,6 @@
 /* global axios */
 /* global $ */
+/* global Swal */
 
 $("#results").hide();
 
@@ -16,7 +17,7 @@ function NameSearch(pokemon) {
           'Pokémon Not Found!',
           `You may have input the incorrect name/index! Pokémon list covered up to Alola Region / Index 1-807`,
           'question'
-        )
+        );
     });
 
     axios.get(pokemonurl)
