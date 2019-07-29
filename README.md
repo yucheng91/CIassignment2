@@ -12,14 +12,14 @@ The Pokedex site has be designed to be one single page with one single input (vi
 1.HTML  
 2.CSS  
 3.Bootstrap (v4.3.1)  
-4.D3
-5.Google Fonts
-6.Jquery
-7.Axios
+4.D3  
+5.Google Fonts  
+6.Jquery  
+7.Axios  
 
 ## Features
 The features are as of following:  
-- Single input field (Can be in Index number or Pokemon name regardless of casing)
+- Single input field (Can be in Index number or Pokemon name regardless of the casing)
 - D3 chart for easy understanding for each pokemon strongest/weakest stats.
 - Damange overview to provide user with all-in-one knowleadge of how to engage the battle in best possible way.
 - Audio player with the music from first pokemon game at the bottom for user to enhance the overall experience.

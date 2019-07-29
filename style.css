@@ -69,8 +69,8 @@ h4 {
 }
 
 #screen {
-    margin:5%;
-    border:10px solid white;
+    margin:2%;
+    border:5px solid white;
     overflow: scroll;
     padding:10px;
     border-radius:10px;

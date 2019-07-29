@@ -176,11 +176,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ddf6 = "";
                 }
+                let ddf7;
+                try {
+                    ddf7 = "/ " + dr.double_damage_from[6].name;
+                }
+                catch (error) {
+                    ddf7 = "";
+                }
                 if (ddf1 == "") {
                     $('#doubledamagefrom').html("");
                 }
                 else {
-                    $('#doubledamagefrom').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6);
+                    $('#doubledamagefrom').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6 + " " + ddf7);
                 }
 
                 //Double Damage To//
@@ -230,11 +237,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ddt6 = "";
                 }
+                let ddt7;
+                try {
+                    ddt7 = "/ " + dr.double_damage_to[6].name;
+                }
+                catch (error) {
+                    ddt7 = "";
+                }
                 if (ddt1 == "") {
                     $('#doubledamageto').html("");
                 }
                 else {
-                    $('#doubledamageto').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6);
+                    $('#doubledamageto').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6 + " " + ddt7);
                 }
 
 
@@ -285,11 +299,18 @@ Hint : index 1-807`);
                 catch (error) {
                     hdf6 = "";
                 }
+                let hdf7;
+                try {
+                    hdf7 = "/ " + dr.half_damage_from[6].name;
+                }
+                catch (error) {
+                    hdf7 = "";
+                }
                 if (hdf1 == "") {
                     $('#halfdamagefrom').html("");
                 }
                 else {
-                    $('#halfdamagefrom').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6);
+                    $('#halfdamagefrom').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6 + " " + hdf7);
                 }
 
                 //Half Damage To//
@@ -339,11 +360,18 @@ Hint : index 1-807`);
                 catch (error) {
                     hdt6 = "";
                 }
+                let hdt7;
+                try {
+                    hdt7 = "/ " + dr.half_damage_to[6].name;
+                }
+                catch (error) {
+                    hdt7 = "";
+                }
                 if (hdt1 == "") {
                     $('#halfdamageto').html("");
                 }
                 else {
-                    $('#halfdamageto').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6);
+                    $('#halfdamageto').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6 + " " + hdt7);
                 }
 
 
@@ -394,11 +422,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ndf6 = "";
                 }
+                let ndf7;
+                try {
+                    ndf7 = "/ " + dr.no_damage_from[6].name;
+                }
+                catch (error) {
+                    ndf7 = "";
+                }
                 if (ndf1 == "") {
                     $('#nodamagefrom').html("");
                 }
                 else {
-                    $('#nodamagefrom').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6);
+                    $('#nodamagefrom').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6 + " " + ndf7);
                 }
 
                 //No Damage To//
@@ -448,11 +483,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ndt6 = "";
                 }
+                let ndt7;
+                try {
+                    ndt7 = "/ " + dr.no_damage_to[6].name;
+                }
+                catch (error) {
+                    ndt7 = "";
+                }
                 if (ndt1 == "") {
                     $('#nodamageto').html("");
                 }
                 else {
-                    $('#nodamageto').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6);
+                    $('#nodamageto').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6 + " " + ndt7);
                 }
             });
     }
@@ -509,15 +551,22 @@ Hint : index 1-807`);
                 catch (error) {
                     ddf6 = "";
                 }
+                let ddf7;
+                try {
+                    ddf7 = "/ " + dr.double_damage_from[6].name;
+                }
+                catch (error) {
+                    ddf7 = "";
+                }
                 if (ddf1 == "") {
                     $('#doubledamagefrom2').html("");
                 }
                 else {
-                    $('#doubledamagefrom2').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6);
+                    $('#doubledamagefrom2').html(ddf1 + " " + ddf2 + " " + ddf3 + " " + ddf4 + " " + ddf5 + " " + ddf6 + " " + ddf7);
                 }
 
                 //Double Damage To//
-                               let ddt1;
+                let ddt1;
                 try {
                     ddt1 = dr.double_damage_to[0].name;
                 }
@@ -563,11 +612,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ddt6 = "";
                 }
+                let ddt7;
+                try {
+                    ddt7 = "/ " + dr.double_damage_to[6].name;
+                }
+                catch (error) {
+                    ddt7 = "";
+                }
                 if (ddt1 == "") {
                     $('#doubledamageto2').html("");
                 }
                 else {
-                    $('#doubledamageto2').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6);
+                    $('#doubledamageto2').html(ddt1 + " " + ddt2 + " " + ddt3 + " " + ddt4 + " " + ddt5 + " " + ddt6 + " " + ddt7);
                 }
 
 
@@ -618,11 +674,18 @@ Hint : index 1-807`);
                 catch (error) {
                     hdf6 = "";
                 }
+                let hdf7;
+                try {
+                    hdf7 = "/ " + dr.half_damage_from[6].name;
+                }
+                catch (error) {
+                    hdf7 = "";
+                }
                 if (hdf1 == "") {
                     $('#halfdamagefrom2').html("");
                 }
                 else {
-                    $('#halfdamagefrom2').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6);
+                    $('#halfdamagefrom2').html(hdf1 + " " + hdf2 + " " + hdf3 + " " + hdf4 + " " + hdf5 + " " + hdf6 + " " + hdf7);
                 }
 
                 //Half Damage To//
@@ -672,11 +735,18 @@ Hint : index 1-807`);
                 catch (error) {
                     hdt6 = "";
                 }
+                let hdt7;
+                try {
+                    hdt7 = "/ " + dr.half_damage_to[6].name;
+                }
+                catch (error) {
+                    hdt7 = "";
+                }
                 if (hdt1 == "") {
                     $('#halfdamageto2').html("");
                 }
                 else {
-                    $('#halfdamageto2').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6);
+                    $('#halfdamageto2').html(hdt1 + " " + hdt2 + " " + hdt3 + " " + hdt4 + " " + hdt5 + " " + hdt6 + " " + hdt7);
                 }
 
 
@@ -727,11 +797,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ndf6 = "";
                 }
+                let ndf7;
+                try {
+                    ndf7 = "/ " + dr.no_damage_from[6].name;
+                }
+                catch (error) {
+                    ndf7 = "";
+                }
                 if (ndf1 == "") {
                     $('#nodamagefrom2').html("");
                 }
                 else {
-                    $('#nodamagefrom2').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6);
+                    $('#nodamagefrom2').html(ndf1 + " " + ndf2 + " " + ndf3 + " " + ndf4 + " " + ndf5 + " " + ndf6 + " " + ndf7);
                 }
 
                 //No Damage To//
@@ -781,11 +858,18 @@ Hint : index 1-807`);
                 catch (error) {
                     ndt6 = "";
                 }
+                let ndt7;
+                try {
+                    ndt7 = "/ " + dr.no_damage_to[6].name;
+                }
+                catch (error) {
+                    ndt7 = "";
+                }
                 if (ndt1 == "") {
                     $('#nodamageto2').html("");
                 }
                 else {
-                    $('#nodamageto2').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6);
+                    $('#nodamageto2').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6 + " " + ndt7);
                 }
             });
         }
