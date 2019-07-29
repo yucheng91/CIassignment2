@@ -12,10 +12,11 @@ function NameSearch(pokemon) {
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
 
     $.get(pokemonurl).fail(function() {
-        alert(
-            `You may have input the incorrect name/index
-Pokemon list covered up to Alola Region
-Hint : index 1-807`);
+            Swal.fire(
+          'Pokémon Not Found!',
+          `You may have input the incorrect name/index! Pokémon list covered up to Alola Region / Index 1-807`,
+          'question'
+        )
     });
 
     axios.get(pokemonurl)
