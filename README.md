@@ -34,7 +34,7 @@ The features are of the following:
 - Audio player with the music from first Pokémon game at the bottom for user to enhance the overall experience.
 
 ## Testing
-The layout has been tested on Windows laptop/Macbook /iPad Mini(2018) /Pixel 2 XL/iPhone SE covering various screen-size. Browsers used for testing are Microsoft Edge, Google Chrome & Apple Safari.
+The layout has been tested on Windows laptop/Macbook /iPad Mini(2018) /Pixel 2 XL/iPhone SE covering various screen-size. Browsers used for testing are Microsoft Edge, Google Chrome & Apple Safari. All the testing screenshot can be found under demo folder.
 
 Site testing findings:  
 - D3 chart is not mobile responsive as it lack of auto-resizing feature, hence I have included the CSS feature "overflow: scroll" so that users from different screen size are still able to view the chart on their screen by scrolling left/right.

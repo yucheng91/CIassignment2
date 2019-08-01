@@ -6,14 +6,14 @@ $("#results").hide();
 
 function NameSearch(pokemon) {
     $("#results").fadeIn(2500);
-    
+
     let name = document.getElementById("NameInput").value.toLowerCase();
-    
-    if (name == ""){
+
+    if (name == "") {
         Swal.fire(
-          'Nothing has been entered!',
-          `Pokémon list covered up to Alola Region / Index 1-807`,
-          'question'
+            'Nothing has been entered!',
+            `Pokémon list covered up to Alola Region / Index 1-807`,
+            'question'
         );
     }
 
@@ -21,10 +21,10 @@ function NameSearch(pokemon) {
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
 
     $.get(pokemonurl).fail(function() {
-            Swal.fire(
-          'Pokémon Not Found!',
-          `You may have input the incorrect name/index! Pokémon list covered up to Alola Region / Index 1-807`,
-          'question'
+        Swal.fire(
+            'Pokémon Not Found!',
+            `You may have input the incorrect name/index! Pokémon list covered up to Alola Region / Index 1-807`,
+            'question'
         );
     });
 
@@ -104,7 +104,8 @@ function NameSearch(pokemon) {
             finally {
                 if (pokemontype2 == "") {
                     $('#pokemontype2').html("");
-                }else{
+                }
+                else {
                     $('#pokemontype2').html(pokemontype2);
                 }
             }
@@ -201,7 +202,7 @@ function NameSearch(pokemon) {
                 }
 
                 //Double Damage To//
-                               let ddt1;
+                let ddt1;
                 try {
                     ddt1 = dr.double_damage_to[0].name;
                 }
@@ -508,6 +509,7 @@ function NameSearch(pokemon) {
                 }
             });
     }
+
     function makeTypes2(pokemontype2url) {
         axios.get(pokemontype2url)
             .then(function(response) {
@@ -882,5 +884,5 @@ function NameSearch(pokemon) {
                     $('#nodamageto2').html(ndt1 + " " + ndt2 + " " + ndt3 + " " + ndt4 + " " + ndt5 + " " + ndt6 + " " + ndt7);
                 }
             });
-        }
+    }
 }
