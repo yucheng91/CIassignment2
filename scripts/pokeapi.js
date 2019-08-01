@@ -8,6 +8,14 @@ function NameSearch(pokemon) {
     $("#results").fadeIn(2500);
     
     let name = document.getElementById("NameInput").value.toLowerCase();
+    
+    if (name == ""){
+        Swal.fire(
+          'Nothing has been entered!',
+          `Pokémon list covered up to Alola Region / Index 1-807`,
+          'question'
+        );
+    }
 
     //PokeAPI api works by having the pokemon name/Stat right behind the URL
     let pokemonurl = "https://pokeapi.co/api/v2/pokemon/" + name;
