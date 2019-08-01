@@ -5,11 +5,12 @@ Pokédex is the website I created to provide the most crucial information that a
 
 It provides a clear overview of the base statistic (or base stats) consists of Speed/Attack/Defense/Special Attack/Special Defense/HP along with all the damage information the players would need to plan & battle to their advantage in the game. 
 
-The information is mainly targetted at players with Nintendo main Pokémon series instead of the side series like Pokémon Go due to different base stats, however, Pokémon Go player still can refer to the damage overview for their Pokémon Go battle.
+The information is mainly targetted at players with Nintendo main Pokémon series instead of the side series like Pokémon Go due to different base stats, however, Pokémon Go player still can refer to the 'damage overview' for their Pokémon Go battle.
 
 ## UX
-The Pokédex site has been designed to be one single page with one single input (via Name or Index) required ensure the ease of use for all mobile users.
-Background,colour scheme and layout are inspired by Pokémon Go & Pokédex.
+The Pokédex site has been designed to be one single page with one single input (via Name or Index) required to ensure the ease of use for all mobile users.  
+
+Background, colour scheme and layout are inspired by Pokémon Go & Pokédex.
 
 ## Technologies
 1.HTML  
@@ -29,7 +30,7 @@ The features are of the following:
 - The stats shown are the base stats of each Pokémon, base stats are often the prime representation of the potential a Pokémon species has in battle.
 - Damage overview to provide the user with all-in-one knowledge of how to engage the battle in the best possible way.
 - Damage overview is shown based on Pokémon type and the result has been highlighted with border colour under each type for easy reference.
-- If result is none, empty space will appear.
+- If the result is none, empty space will appear.
 - Audio player with the music from first Pokémon game at the bottom for user to enhance the overall experience.
 
 ## Testing
@@ -43,8 +44,8 @@ In order to prevent this, I have included multiple Try/Catch feature to ensure t
 - For the Stats & Damage Overview section title, I initially created it using bootstrap column function to centralize the section title. However, I realised that the unresponsive chart will extend the column width and shifted the section title to the right. Hence instead of using bootstrap column function, I used Margin-left/Margin-right: Auto to ensure that the section title maintains in their centre aligned with the remaining of the site.
 
 Jasmine Testing findings : 
+- Jasmine test has to be done specifically based on each Pokémon API, as all Pokémon are varied in their type & ability, the main purpose of jasmine testing is to test if each Axios API test is able to retrieve the exact details based on each Pokémon's API.
 - Jasmine is unable to identify the link that returned 'Not Found' for the link with invalid name/index (example: https://pokeapi.co/api/v2/pokemon/codeinstitute) as it is still considered as a valid URL site hence it has been done manually.
-- As all Pokémon are varied in their type & ability, the main purpose of jasmine testing is to test if each Axios API test is able to retrieve the exact details based on each Pokémon's API.
 
 ## Deployment
 The site is hosted & deployed directly on the GitHub pages. The HTML page has to be named as index.html to ensure Github deployment will be able to display the page successfully.
@@ -56,12 +57,13 @@ in order to save resource, users can choose to delete the 'test' folder which I 
 ## Credits 
 
 ### Content 
-PokéAPI @ pokeapi.co
-Nintendo
-The Pokémon Company
+PokéAPI @ pokeapi.co  
+Nintendo  
+The Pokémon Company  
+Game Freak Inc  
 
 ### Media
 Pokémon Original Game Soundtrack @ khinsider.com
 
 ### Design
-Pokémon Go/official Pokédex for overall design inspiration
+Pokémon Go/Pokédex for overall design inspiration
