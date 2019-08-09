@@ -26,7 +26,7 @@ Background, colour scheme and layout are inspired by Pokémon Go & Pokédex.
 ## Features
 The features are of the following:  
 - Single input field (Can be in Index number or Pokémon name regardless of the casing)
-- Pokemon in-game appearance will shown as thumbnail (if available,based on PokéAPI). Otherwise it will return as blank or no image will be shown.
+- Pokémon in-game appearance will shown as thumbnail (if available,based on PokéAPI). Otherwise it will return as blank or no image will be shown.
 - D3 chart for easy understanding for each Pokémon strongest/weakest stats. The stats go from strongest stats at 12 O'Clock point and goes clockwise to the weakest stats.
 - The stats shown are the base stats of each Pokémon, base stats are often the prime representation of the potential a Pokémon species has in battle.
 - Damage overview to provide the user with all-in-one knowledge of how to engage the battle in the best possible way.
@@ -45,7 +45,7 @@ In order to prevent this, I have included multiple Try/Catch feature to ensure t
 - For the Stats & Damage Overview section title, I initially created it using bootstrap column function to centralize the section title. However, I realised that the unresponsive chart will extend the column width and shifted the section title to the right. Hence instead of using bootstrap column function, I used Margin-left/Margin-right: Auto to ensure that the section title maintains in their centre aligned with the remaining of the site.
 
 Jasmine Testing findings : 
-- Jasmine test has to be done specifically based on each Pokémon API, as all Pokémon are varied in their type & ability, the main purpose of jasmine testing is to test if each Axios API test is able to retrieve the exact details based on each Pokémon's API.
+- Jasmine test has to be done specifically based on each Pokémon API result, as all Pokémon are varied in their type & ability, the main purpose of jasmine testing is to test if each Axios API test is able to retrieve the exact details based on each Pokémon's API.
 - Jasmine is unable to identify the link that returned 'Not Found' for the link with invalid name/index (example: https://pokeapi.co/api/v2/pokemon/codeinstitute) as it is still considered as a valid URL site hence it has been done manually.
 
 ## Deployment
