@@ -26,6 +26,7 @@ Background, colour scheme and layout are inspired by Pokémon Go & Pokédex.
 ## Features
 The features are of the following:  
 - Single input field (Can be in Index number or Pokémon name regardless of the casing)
+- Pokemon in-game appearance will shown as thumbnail (if available,based on PokéAPI). Otherwise it will return as blank or no image will be shown.
 - D3 chart for easy understanding for each Pokémon strongest/weakest stats. The stats go from strongest stats at 12 O'Clock point and goes clockwise to the weakest stats.
 - The stats shown are the base stats of each Pokémon, base stats are often the prime representation of the potential a Pokémon species has in battle.
 - Damage overview to provide the user with all-in-one knowledge of how to engage the battle in the best possible way.
