@@ -23,7 +23,7 @@ function NameSearch(pokemon) {
     $.get(pokemonurl).fail(function() {
         Swal.fire(
             'Pokémon Not Found!',
-            `You may have input the incorrect name/index! Pokémon list covered up to Alola Region / Index 1-807`,
+            `You may have input the incorrect name/index! Pokémon list covered up to Index 1-898`,
             'question'
         );
     });
