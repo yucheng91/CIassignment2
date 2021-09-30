@@ -51,12 +51,12 @@ function NameSearch(pokemon) {
             $('#pokemonname').html(pokemonname);
             $('#pokemontype').html("Type: ");
             $('#pokemontype1').html(pokemontype1);
-            $('#ddf').html("Double Damange From : ");
-            $('#ddt').html("Double Damange To : ");
-            $('#hdf').html("Half Damange From : ");
-            $('#hdt').html("Half Damange To : ");
-            $('#ndf').html("No Damange From : ");
-            $('#ndt').html("No Damange To : ");
+            $('#ddf').html("Double Damage From : ");
+            $('#ddt').html("Double Damage To : ");
+            $('#hdf').html("Half Damage From : ");
+            $('#hdt').html("Half Damage To : ");
+            $('#ndf').html("No Damage From : ");
+            $('#ndt').html("No Damage To : ");
 
             //combining the stat & stat result 
             let pokemonstatname1 = rd.stats[0].stat.name;
