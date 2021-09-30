@@ -12,7 +12,7 @@ function NameSearch(pokemon) {
     if (name == "") {
         Swal.fire(
             'Nothing has been entered!',
-            `Pokémon list covered up to Alola Region / Index 1-807`,
+            `Pokémon list covered up to Index 1-898`,
             'question'
         );
     }
