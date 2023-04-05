@@ -12,7 +12,7 @@ function NameSearch(pokemon) {
     if (name == "") {
         Swal.fire(
             'Nothing has been entered!',
-            `Pokémon list covered up to Index 1-898`,
+            `Pokémon list covered up to Index 1-1010`,
             'question'
         );
     }
